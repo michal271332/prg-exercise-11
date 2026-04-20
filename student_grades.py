@@ -43,14 +43,16 @@ class StudentsGrades:
         return scores
 
 def main():
-    results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
-    random_results = StudentsGrades(random_numbers(30, 0, 100))
+    # results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
+    results = StudentsGrades(random_numbers(30, 0, 100))
     print(f"Test napsalo: {results.count()}")
-    for idx in range(results):
+    for idx in range(len(results.scores)):
         print(f"Student {idx}: {results.get_by_index(idx)} points - {results.get_grade(idx)}")
     print(f"Plny pocet bodu: {results.find(100)}")
     print(results.get_sorted())
 
 
 if __name__ == "__main__":
-    
+    main()
+
+
